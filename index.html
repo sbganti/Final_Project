@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Music DNA — An Anthology of South Asian Diaspora Music</title>
+</head>
+<body>
+
+    <div class="skip">
+        <a href="#main-content">Skip to Main Content</a>
+    </div>
+
+
+    <!-- =====================================================
+         DOT SCROLL NAVIGATION
+         Acknowledgement: IntersectionObserver technique from CSS-Tricks
+         https://css-tricks.com/sticky-smooth-active-nav/
+    ====================================================== -->
+    <nav class="dot-nav" id="dotNav">
+        <a href="#hero"     class="dot" data-label="Intro"></a>
+        <a href="#phase1"   class="dot" data-label="1960s–70s"></a>
+        <a href="#phase2"   class="dot" data-label="1980s"></a>
+        <a href="#phase3"   class="dot" data-label="1990s"></a>
+        <a href="#phase4"   class="dot" data-label="2000s"></a>
+        <a href="#phase5"   class="dot" data-label="2010s"></a>
+        <a href="#phase6"   class="dot" data-label="2020s"></a>
+        <a href="#playlist" class="dot" data-label="Playlist"></a>
+    </nav>
+
+    <!-- =====================================================
+         HERO
+         HOW TO ADD A HERO IMAGE:
+           Option A — CSS background (recommended for full bleed):
+             In styles.css find .hero and uncomment:
+             background-image: url('../images/your-image.jpg');
+           Option B — HTML img tag:
+             Add src="images/your-image.jpg" to the <img> below
+             and remove the display:none style.
+    ====================================================== -->
+    <header class="hero" id="hero">
+        <!-- Remove style="display:none" and set src when you have a hero image -->
+        <img src="" alt="" class="hero-img" style="display:none;">
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">A Sonic Journey · 1960 – Present</p>
+            <h1 class="hero-title">Music <em>DNA</em></h1>
+            <p class="hero-desc">How the South Asian Diaspora built one of the world's most extraordinary musical movements — from harmoniums in Southall living rooms to headlining Coachella.</p>
+            <p class="hero-hint">↓ Scroll to explore</p>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- =================================================
+             PHASE 1 — image LEFT, text RIGHT
+             HOW TO CHANGE IMAGE: replace src on the <img>.
+             HOW TO USE VIDEO: delete <img>, uncomment <video>.
+        ================================================== -->
+        <section class="phase-card" id="phase1">
+            <figure class="phase-media">
+                <img src="images/alaap.jpg" alt="Phase 1 — Living Room Era, 1960s to 1970s">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 01</span>
+                <h2>1960s – 1970s</h2>
+                <h3>"The Living Room Era"</h3>
+                <p class="phase-vibe">Preservation · Nostalgia · Identity</p>
+                <p>Post-war migration brought families from <strong>Punjab</strong> and <strong>Gujarat</strong> to West London and the Midlands. Music was private; harmoniums and dhols played in living rooms to stave off homesickness. In <strong>1977</strong>, Channi Singh formed <strong>Alaap</strong> in Southall, replacing acoustic instruments with electric guitars. The blueprint was set.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>Key Moment</strong><p>Birth of UK Bhangra — Alaap, Southall, 1977. "Bhabiye Ni Bhabiye" becomes the founding document.</p></div>
+                    <div class="moment"><strong>Inspiration</strong><p>Punjabi Boliyan folk couplets + 1970s American disco production.</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/65dFjjYLkeFYa0ylLUsEDD?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PHASE 2 — image RIGHT, text LEFT -->
+        <section class="phase-card reversed" id="phase2">
+            <figure class="phase-media">
+                <img src="images/ApnaSangeet.jpg" alt="Phase 2 — The Bhangra Explosion, 1980s">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 02</span>
+                <h2>1980s</h2>
+                <h3>"The Bhangra Explosion"</h3>
+                <p class="phase-vibe">High-Energy · Communal · Loud</p>
+                <p>Bhangra erupts from community halls into concert venues. <strong>Heera</strong> and <strong>Apna Sangeet</strong> become the Beatles of British Asian culture. In <strong>1984</strong> the LinnDrum enters the studio — folk rhythm meets digital machine. New Romantic synth-pop seeps in.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>Technology</strong><p>The Digital Shift — LinnDrum snare under a Dhol rhythm creates a new sonic architecture.</p></div>
+                    <div class="moment"><strong>Key Artists</strong><p>Heera · Apna Sangeet · AS Kang</p></div>
+                    <div class="moment"><strong>Inspiration</strong><p>UK New Romantic synth-pop collides with Punjabi wedding music.</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2Q6IGF06kCYdgCbG9jSGvV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PHASE 3 — image LEFT, text RIGHT -->
+        <article class="phase-card" id="phase3">
+            <figure class="phase-media">
+                <img src="images/daytimers.png" alt="Phase 3 — The Asian Underground, 1990s">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 03</span>
+                <h2>1990s</h2>
+                <h3>"The Asian Underground"</h3>
+                <p class="phase-vibe">Experimental · Rebellious · Political</p>
+                <p>The Golden Era. A new generation of UK-born South Asians blend heritage with Jungle, Dub, and Hip-Hop. New genres pop up. <strong>Apache Indian</strong> invents "Bhangramuffin." <strong>Bally Sagoo</strong> puts Bollywood in the UK Top 40. <strong>Talvin Singh</strong> wins the Mercury Prize — Tabla over Drum &amp; Bass.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>Defining Moment</strong><p>Anokha club nights at the Blue Note, London — Talvin Singh makes the diaspora sound cool to the mainstream.</p></div>
+                    <div class="moment"><strong>New Genres</strong>
+                        <p>Bhangramuffin — Bhangra rhythms fused with Jamaican Dancehall, UK Punjabi Garage - Folk punjabi beats layered with the sounds of the enormously popular UK garage sound.</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5rYJbmPYDaC4yJ8toRSrof?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1cGzOaN56kLZjxjGq3gsOB?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/49DH4WmA8TESKhKFnJVddH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- PHASE 4 — image RIGHT, text LEFT -->
+        <article class="phase-card reversed" id="phase4">
+            <figure class="phase-media">
+                <img src="images/JaySean.jpg" alt="Phase 4 — The Rishi Rich Era, 2000s">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 04</span>
+                <h2>2000s-2010s</h2>
+                <h3>"South Asia Goes Global"</h3>
+                <p class="phase-vibe">Glossy · R&amp;B-Infused · Urban Desi</p>
+                <p>The Asian Underground goes mainstream. <strong>Panjabi MC's</strong> "Mundian To Bach Ke" becomes a global hit — Jay-Z jumps on the remix. The <strong>Rishi Rich Project</strong> defines "Urban Desi." <strong>M.I.A.</strong> turns her refugee identity into global protest pop.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>The Collision</strong><p>Panjabi MC × Jay-Z — Ludhiana meets New York City, 2003.</p></div>
+                    <div class="moment"><strong>Inspiration</strong><p>Timbaland's production style + 2000s American Hip-Hop + Punjabi dhol.</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3iCNWfTDryCWydzD3C00v2?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3iDGjoK2Qhj7hSzLDLEosc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1ixbwbeBi5ufN4noUKmW5a?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- PHASE 5 — image LEFT, text RIGHT -->
+        <article class="phase-card" id="phase5">
+            <figure class="phase-media">
+                <img src="images/AP.jpeg" alt="Phase 5: A Side — The Homecoming, 2010s-Present">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 05 - A Side</span>
+                <h2>2010s-Present</h2>
+                <h3>"The Homecoming"</h3>
+                <p class="phase-vibe">Independent · Digital-First · Genre-Fluid</p>
+                <p>Record labels decline; British Asian artists turn to YouTube. <strong>Arjun</strong> goes viral R&amp;B-ifying Bollywood hits. Producer <strong>Steel Banglez</strong> becomes the UK Rap architect, weaving Indian melodic scales into tracks for Mist and J Hus.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>Cultural Shift</strong><p>Indian raga-adjacent melodies enter trap beats — no explanation needed.</p></div>
+                    <div class="moment"><strong>Pioneer</strong><p>Steel Banglez — the invisible hand shaping the UK Rap sound.</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/29m79w9xPMH4YCD6r8JSmV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5PdLhmHOy2dnnFIMrj8in0?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- PHASE 6 — image RIGHT, text LEFT -->
+        <article class="phase-card reversed" id="phase6">
+            <figure class="phase-media">
+                <img src="images/dhee.jpeg" alt="Phase 5: B Side — South on Top, 2010s-Present">
+            </figure>
+            <div class="phase-text">
+                <span class="phase-label">Phase 05 - B Side</span>
+                <h2>2010s-Present</h2>
+                <h3>"South on Top"</h3>
+                <p class="phase-vibe">Unapologetic · Alternative · High-Fashion</p>
+                <p>Today's diaspora spans Neo-Soul, Jazz, Psychedelic Rock, and hyper-pop. <strong>AP Dhillon's</strong> "Brown Munde" becomes the anthem. <strong>Joy Crookes</strong> and <strong>Priya Ragu</strong> put Sitar samples into Neo-Soul. <strong>Diljit Dosanjh</strong> headlines Coachella.</p>
+                <div class="moment-cards">
+                    <div class="moment"><strong>Defining Moment</strong><p>Diljit Dosanjh and Ali Sethi at Glastonbury and Coachella — the diaspora sound is now the global sound.</p></div>
+                    <div class="moment"><strong>Genres</strong><p>Neo-Soul · Jazz · Psychedelic Rock · Hyper-Pop · Punjabi Folk</p></div>
+                </div>
+                <ul class="hits">
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0OA00aPt3BV10qeMIs3meW?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4sJJ2mXrAPEyHWIvKbV4ef?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                    <li>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0xErrzRegFIsekcvQ5wsS0?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- =================================================
+             SPOTIFY PLAYLIST SECTION
+             Inspiration: https://vivianle05.github.io/339finalproject/owen.html
+             HOW TO LINK YOUR PLAYLIST:
+               1. In Spotify, right-click your playlist → Share → Copy link.
+               2. The playlist ID is the part after /playlist/ in the URL.
+               3. Replace PASTE_YOUR_PLAYLIST_ID_HERE in the iframe src below.
+        ================================================== -->
+        <section class="playlist-section" id="playlist">
+            <div class="playlist-text">
+                <h2>The Full Soundtrack</h2>
+                <p>Every era, every sound — collected into one playlist. From Bhangra classics to the Tamil Wave, this is the music that shaped a community.</p>
+                <p>Follow along on Spotify and keep the sounds of the diaspora alive.</p>
+            </div>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4wEYVa9z4GpdryHk1OhMQD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Music DNA — British South Asian Diaspora · 1960–2025</p>
+        <p>Alaap · Heera · Apache Indian · Bally Sagoo · Talvin Singh · Panjabi MC · M.I.A. · Jay Sean · Steel Banglez · AP Dhillon · Joy Crookes · Priya Ragu</p>
+    </footer>
+
+    <script src="js/spotify-config.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
+<!-- ============================================================
+     REFERENCES
+
+     Title: Vanilla JavaScript scroll progress bar
+     Author: KirstyF, Stack Overflow community
+     Date Accessed: April 2026
+     Availability: https://stackoverflow.com/questions/78168399/vanilla-javascript-to-show-scroll-progress-bar-that-fills-only-while-scrolling-t
+
+     Title: Sticky Smooth Active Nav (IntersectionObserver dot nav)
+     Author: CSS-Tricks community
+     Date Accessed: April 2026
+     Availability: https://css-tricks.com/sticky-smooth-active-nav/
+
+     Title: Spotify Embeds — Developer Documentation
+     Author: Spotify for Developers
+     Date Accessed: April 2026
+     Availability: https://developer.spotify.com/documentation/embeds
+
+     Title: Considerations for Styling a Modal
+     Author: CSS-Tricks community
+     Date Accessed: April 2026
+     Availability: https://css-tricks.com/considerations-styling-modal/
+
+     Title: Spotify playlist embed inspiration
+     Author: Vivian Le, Owen (339 Final Project)
+     Date Accessed: April 2026
+     Availability: https://vivianle05.github.io/339finalproject/owen.html
+
+     Title: CSS Box-Shadow Property
+     Author: W3Schools.com
+     Date Accessed: April 2026
+     Availability: https://www.w3schools.com/cssref/css3_pr_box-shadow.php
+============================================================ -->

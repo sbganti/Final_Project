@@ -1,0 +1,343 @@
+
+body {
+    background-color: #f5f0e8;
+    background-image: url('../images/background.webp'); /* replace with your file */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1a1a1a;
+    font-family: 'Space Mono', monospace, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 0px; /* clears the fixed progress bar */
+}
+
+
+/* ============================================================
+   SKIP LINK
+   ============================================================ */
+.skip a {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    background-color: #FFCB05;
+    color: #000000;
+    padding: 12px 20px;
+    border: 1px solid #000000;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 9999;
+}
+.skip a:focus { top: 16px; }
+
+
+/* ============================================================
+   DOT SCROLL NAVIGATION
+   Acknowledgement: Dot nav active-state pattern from CSS-Tricks:
+   https://css-tricks.com/sticky-smooth-active-nav/
+   ============================================================ */
+
+/* explanation: fixed to the right side, vertically centred */
+.dot-nav {
+    position: fixed;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* explanation: each dot is a circular <a> link */
+.dot-nav .dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #171717;
+    text-decoration: none;
+    transition: background-color 0.25s, transform 0.25s;
+    position: relative;
+}
+/* explanation: hover and active states fill the dot gold */
+.dot-nav .dot:hover,
+.dot-nav .dot.active {
+    background-color: #FFCB05;
+    border-color: #171717;
+    transform: scale(1.35);
+}
+/* explanation: tooltip label shown left of dot on hover */
+.dot-nav .dot::after {
+    content: attr(data-label);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 10px;
+    white-space: nowrap;
+    background-color: #171717;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.dot-nav .dot:hover::after { opacity: 1; }
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 2rem;
+    background-image: url('../images/southall.webp');
+    background-size: cover; background-position: center;
+}
+/* explanation: dark overlay so text stays readable over any image */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+.hero-content { position: relative; z-index: 1; max-width: 680px; }
+.hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #FFCB05;
+    margin-bottom: 1rem;
+}
+.hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+.hero-title em { color: #FFCB05; font-style: italic; }
+.hero-desc {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+}
+.hero-hint {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MAIN CONTENT WRAPPER
+   ============================================================ */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+
+/* ============================================================
+   PHASE CARDS — 2-column image + text grid
+   ============================================================ */
+.phase-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+/* explanation: .reversed flips column order (image right) */
+.phase-card.reversed { direction: rtl; }
+.phase-card.reversed .phase-media,
+.phase-card.reversed .phase-text { direction: ltr; }
+
+.phase-media { overflow: hidden; min-height: 340px; margin: 0; }
+.phase-media img,
+.phase-media video {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block; border: none;
+}
+
+.phase-text {
+    padding: 2.5rem 2rem;
+    border-left: 1px solid #171717;
+    display: flex; flex-direction: column; gap: 1rem;
+}
+.phase-card.reversed .phase-text {
+    border-left: none;
+    border-right: 1px solid #171717;
+}
+
+.phase-label {
+    font-size: 0.6rem; letter-spacing: 0.4em;
+    text-transform: uppercase; color: #171717; font-weight: 700;
+}
+h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 900; color: #171717; line-height: 1.1;
+}
+h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    font-style: italic; font-weight: 400; color: #555555;
+}
+.phase-vibe {
+    display: inline-block; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: #171717;
+    border: 1.5px solid #717171;
+    padding: 3px 10px; border-radius: 2px;
+}
+.phase-text > p { font-size: 0.82rem; line-height: 1.85; color: #333333; }
+
+
+/* ============================================================
+   MOMENT CARDS
+   ============================================================ */
+.moment-cards { display: flex; flex-direction: column; gap: 8px; }
+.moment {
+    background-color: #171717; color: #FFFFFF;
+    padding: 10px 14px;
+    border-left: 4px solid #FFCB05;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.moment strong {
+    display: block; font-size: 0.55rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: #FFCB05; margin-bottom: 5px;
+}
+.moment p { font-size: 0.75rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0; }
+
+
+/* ============================================================
+   HIT TRACKS LIST
+   ============================================================ */
+.hits { 
+    list-style: none; 
+    border-top: 1px solid rgba(0,39,76,0.15); 
+    padding-top: 8px; }
+.hit {
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 4px; border-bottom: 1px solid rgba(0,39,76,0.08);
+    cursor: pointer; border-radius: 4px; transition: background-color 0.15s;
+}
+
+
+
+/* ============================================================
+   PLAYLIST SECTION
+   Inspiration: https://vivianle05.github.io/339finalproject/owen.html
+   ============================================================ */
+.playlist-section {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    background-color: rgba(23, 23, 23, 0.9);
+    border-radius: 10px; padding: 2.5rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    align-items: center;
+}
+.playlist-text h2 { color: #FFFFFF; margin-bottom: 1rem; }
+.playlist-text p { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 0.75rem; }
+.playlist-embed { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+.playlist-embed iframe { display: block; width: 100%; border: none; }
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background-color: #383838; 
+    color: rgba(255,255,255,0.8);
+    text-align: center; 
+    padding: 2rem; 
+    font-size: 0.72rem; 
+    line-height: 2;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.12);
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 620px)
+   ============================================================ */
+/* @media screen and (max-width: 620px) {
+    .phase-card { 
+        grid-template-columns: 1fr; 
+    }
+    .phase-card.reversed { 
+        direction: ltr; 
+    }
+    .phase-text { 
+        border-left: none; 
+        border-top: 1px solid rgba(0,39,76,0.1); 
+        padding: 1.5rem; 
+    }
+    .phase-card.reversed .phase-text { 
+        border-right: none; 
+        border-top: 1px solid rgba(0,39,76,0.1); }
+    .playlist-section { 
+        grid-template-columns: 1fr; padding: 1.5rem; }
+    .dot-nav { display: none; }
+} */
+
+
+/* ============================================================
+   REFERENCES
+
+   Title: Vanilla JavaScript scroll progress bar
+   Author: KirstyF, Stack Overflow
+   Date Accessed: April 2026
+   Availability: https://stackoverflow.com/questions/78168399/vanilla-javascript-to-show-scroll-progress-bar-that-fills-only-while-scrolling-t
+
+   Title: Sticky Smooth Active Nav (dot nav / IntersectionObserver)
+   Author: CSS-Tricks
+   Date Accessed: April 2026
+   Availability: https://css-tricks.com/sticky-smooth-active-nav/
+
+   Title: Spotify Embeds — Developer Documentation
+   Author: Spotify for Developers
+   Date Accessed: April 2026
+   Availability: https://developer.spotify.com/documentation/embeds
+
+   Title: Considerations for Styling a Modal
+   Author: CSS-Tricks
+   Date Accessed: April 2026
+   Availability: https://css-tricks.com/considerations-styling-modal/
+
+   Title: Spotify playlist embed layout inspiration
+   Author: Vivian Le and Owen (339 Final Project)
+   Date Accessed: April 2026
+   Availability: https://vivianle05.github.io/339finalproject/owen.html
+
+   Title: CSS Box-Shadow Property
+   Author: W3Schools.com
+   Date Accessed: April 2026
+   Availability: https://www.w3schools.com/cssref/css3_pr_box-shadow.php
+============================================================ */
