@@ -15,11 +15,7 @@
     </div>
 
 
-    <!-- =====================================================
-         DOT SCROLL NAVIGATION
-         Acknowledgement: IntersectionObserver technique from CSS-Tricks
-         https://css-tricks.com/sticky-smooth-active-nav/
-    ====================================================== -->
+    <!-- Sticky dot scroll -->
     <nav class="dot-nav" id="dotNav">
         <a href="#hero"     class="dot" data-label="Intro"></a>
         <a href="#phase1"   class="dot" data-label="1960s–70s"></a>
@@ -31,16 +27,7 @@
         <a href="#playlist" class="dot" data-label="Playlist"></a>
     </nav>
 
-    <!-- =====================================================
-         HERO
-         HOW TO ADD A HERO IMAGE:
-           Option A — CSS background (recommended for full bleed):
-             In styles.css find .hero and uncomment:
-             background-image: url('../images/your-image.jpg');
-           Option B — HTML img tag:
-             Add src="images/your-image.jpg" to the <img> below
-             and remove the display:none style.
-    ====================================================== -->
+    <!-- Hero section -->
     <header class="hero" id="hero">
         <!-- Remove style="display:none" and set src when you have a hero image -->
         <img src="" alt="" class="hero-img" style="display:none;">
@@ -56,11 +43,8 @@
 
     <main id="main-content">
 
-        <!-- =================================================
-             PHASE 1 — image LEFT, text RIGHT
-             HOW TO CHANGE IMAGE: replace src on the <img>.
-             HOW TO USE VIDEO: delete <img>, uncomment <video>.
-        ================================================== -->
+        <!-- Phase cards -->
+         <!-- Phase1 -->
         <section class="phase-card" id="phase1">
             <figure class="phase-media">
                 <img src="images/alaap.jpg" alt="Phase 1 — Living Room Era, 1960s to 1970s">
@@ -83,7 +67,7 @@
             </div>
         </section>
 
-        <!-- PHASE 2 — image RIGHT, text LEFT -->
+        <!-- Phase2 -->
         <section class="phase-card reversed" id="phase2">
             <figure class="phase-media">
                 <img src="images/ApnaSangeet.jpg" alt="Phase 2 — The Bhangra Explosion, 1980s">
@@ -107,7 +91,7 @@
             </div>
         </section>
 
-        <!-- PHASE 3 — image LEFT, text RIGHT -->
+        <!-- Phase3 -->
         <article class="phase-card" id="phase3">
             <figure class="phase-media">
                 <img src="images/daytimers.png" alt="Phase 3 — The Asian Underground, 1990s">
@@ -137,7 +121,7 @@
             </div>
         </article>
 
-        <!-- PHASE 4 — image RIGHT, text LEFT -->
+        <!-- Phase4 -->
         <article class="phase-card reversed" id="phase4">
             <figure class="phase-media">
                 <img src="images/JaySean.jpg" alt="Phase 4 — The Rishi Rich Era, 2000s">
@@ -166,7 +150,7 @@
             </div>
         </article>
 
-        <!-- PHASE 5 — image LEFT, text RIGHT -->
+        <!-- Phase5 -->
         <article class="phase-card" id="phase5">
             <figure class="phase-media">
                 <img src="images/AP.jpeg" alt="Phase 5: A Side — The Homecoming, 2010s-Present">
@@ -192,7 +176,7 @@
             </div>
         </article>
 
-        <!-- PHASE 6 — image RIGHT, text LEFT -->
+        <!-- Phase6 -->
         <article class="phase-card reversed" id="phase6">
             <figure class="phase-media">
                 <img src="images/dhee.jpeg" alt="Phase 5: B Side — South on Top, 2010s-Present">
@@ -221,14 +205,7 @@
             </div>
         </article>
 
-        <!-- =================================================
-             SPOTIFY PLAYLIST SECTION
-             Inspiration: https://vivianle05.github.io/339finalproject/owen.html
-             HOW TO LINK YOUR PLAYLIST:
-               1. In Spotify, right-click your playlist → Share → Copy link.
-               2. The playlist ID is the part after /playlist/ in the URL.
-               3. Replace PASTE_YOUR_PLAYLIST_ID_HERE in the iframe src below.
-        ================================================== -->
+        <!-- Spotify Playlist Section -->
         <section class="playlist-section" id="playlist">
             <div class="playlist-text">
                 <h2>The Full Soundtrack</h2>

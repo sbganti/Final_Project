@@ -1,7 +1,7 @@
 
 body {
     background-color: #f5f0e8;
-    background-image: url('../images/background.webp'); /* replace with your file */
+    background-image: url('../images/background.webp');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -10,13 +10,11 @@ body {
     font-family: 'Space Mono', monospace, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding-top: 0px; /* clears the fixed progress bar */
+    padding-top: 0px;
 }
 
 
-/* ============================================================
-   SKIP LINK
-   ============================================================ */
+/* Skip */
 .skip a {
     position: absolute;
     top: -100px;
@@ -38,7 +36,7 @@ body {
    https://css-tricks.com/sticky-smooth-active-nav/
    ============================================================ */
 
-/* explanation: fixed to the right side, vertically centred */
+
 .dot-nav {
     position: fixed;
     right: 18px;
@@ -49,7 +47,7 @@ body {
     flex-direction: column;
     gap: 12px;
 }
-/* explanation: each dot is a circular <a> link */
+
 .dot-nav .dot {
     display: block;
     width: 12px;
@@ -61,14 +59,14 @@ body {
     transition: background-color 0.25s, transform 0.25s;
     position: relative;
 }
-/* explanation: hover and active states fill the dot gold */
+
 .dot-nav .dot:hover,
 .dot-nav .dot.active {
     background-color: #FFCB05;
     border-color: #171717;
     transform: scale(1.35);
 }
-/* explanation: tooltip label shown left of dot on hover */
+
 .dot-nav .dot::after {
     content: attr(data-label);
     position: absolute;
@@ -89,9 +87,7 @@ body {
 .dot-nav .dot:hover::after { opacity: 1; }
 
 
-/* ============================================================
-   HERO
-   ============================================================ */
+/* Hero section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -144,9 +140,6 @@ body {
 }
 
 
-/* ============================================================
-   MAIN CONTENT WRAPPER
-   ============================================================ */
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -157,9 +150,7 @@ main {
 }
 
 
-/* ============================================================
-   PHASE CARDS — 2-column image + text grid
-   ============================================================ */
+/* Phase cards */
 .phase-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -214,9 +205,7 @@ h3 {
 .phase-text > p { font-size: 0.82rem; line-height: 1.85; color: #333333; }
 
 
-/* ============================================================
-   MOMENT CARDS
-   ============================================================ */
+/* Defining Moments */
 .moment-cards { display: flex; flex-direction: column; gap: 8px; }
 .moment {
     background-color: #171717; color: #FFFFFF;
@@ -232,10 +221,8 @@ h3 {
 }
 .moment p { font-size: 0.75rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0; }
 
-
-/* ============================================================
-   HIT TRACKS LIST
-   ============================================================ */
+x
+/* Hits */
 .hits { 
     list-style: none; 
     border-top: 1px solid rgba(0,39,76,0.15); 
@@ -265,9 +252,7 @@ h3 {
 .playlist-embed iframe { display: block; width: 100%; border: none; }
 
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* Footer */
 footer {
     background-color: #383838; 
     color: rgba(255,255,255,0.8);
@@ -284,10 +269,8 @@ img {
 }
 
 
-/* ============================================================
-   RESPONSIVE — MOBILE (max-width: 620px)
-   ============================================================ */
-/* @media screen and (max-width: 620px) {
+/* Media Screen */
+@media screen and (max-width: 620px) {
     .phase-card { 
         grid-template-columns: 1fr; 
     }
@@ -305,7 +288,7 @@ img {
     .playlist-section { 
         grid-template-columns: 1fr; padding: 1.5rem; }
     .dot-nav { display: none; }
-} */
+}
 
 
 /* ============================================================
